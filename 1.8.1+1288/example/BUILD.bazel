@@ -3,5 +3,8 @@ load("@io_bazel_rules_go//go:def.bzl", "go_test")
 go_test(
     name = "example_test",
     srcs = ["example_test.go"],
-    deps = ["@com_github_stretchr_testify//require"],
+    deps = [
+        "//example/helper",
+        "@com_github_stretchr_testify//require",
+    ],
 )
